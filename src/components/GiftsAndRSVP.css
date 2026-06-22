@@ -1,0 +1,299 @@
+.elegant-rsvp-container {
+  background-color: transparent;
+  padding: 3rem 2rem 6rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rsvp-title-script {
+  font-family: var(--font-script);
+  font-size: 4.5rem;
+  font-weight: normal;
+  color: var(--text-main);
+  margin: 0 0 4rem 0;
+  line-height: 1;
+}
+
+.rsvp-cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 3rem auto;
+}
+
+@media (min-width: 768px) {
+  .rsvp-cards-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+.rsvp-card.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.rsvp-card.glass-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.card-icon-circle {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.card-icon-circle svg {
+  width: 35px;
+  height: 35px;
+  color: white;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.rsvp-card .rsvp-elegant-text {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  color: white; /* Ensure it's readable on glass */
+}
+
+.rsvp-card .note {
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  opacity: 0.85;
+}
+
+.premium-btn {
+  display: inline-block;
+  background: white;
+  color: var(--primary-color, #1a3a8a);
+  font-family: var(--font-sans, system-ui);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  padding: 1.2rem 2rem;
+  border-radius: 30px;
+  margin-top: auto; /* Push to bottom if text lengths vary */
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.premium-btn:hover {
+  background: var(--accent-light);
+  color: white;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.premium-btn.whatsapp-btn {
+  background: #25D366; /* WhatsApp color */
+  color: white;
+}
+
+.premium-btn.whatsapp-btn:hover {
+  background: #1ebe58;
+}
+
+.floral-spacer {
+  margin: 2rem 0;
+  width: 50px;
+  height: 50px;
+}
+
+.floral-spacer svg {
+  width: 100%;
+  height: 100%;
+  animation: spinSlow 15s infinite linear;
+}
+
+@keyframes spinSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .rsvp-title-script {
+    font-size: 3.5rem;
+  }
+  .rsvp-elegant-text {
+    font-size: 1.15rem;
+  }
+  .elegant-action-btn {
+    font-size: 1.2rem;
+  }
+  .letter-card {
+    padding: 2.5rem 1.5rem;
+  }
+  .letter-title {
+    font-size: 3rem;
+  }
+  .letter-text {
+    font-size: 1.05rem;
+  }
+  .signature-names {
+    font-size: 2rem;
+  }
+  .dedicatoria-section {
+    gap: 2rem;
+  }
+}
+
+/* ── SECCIÓN DEDICATORIA Y CARRUSEL ── */
+.dedicatoria-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 4rem auto 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* Carta a Dante */
+.letter-card {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  background: rgba(252, 250, 242, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  padding: 3.5rem 2.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  color: var(--bg-darker);
+  text-align: center;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+.letter-inner-border {
+  position: absolute;
+  inset: 15px;
+  border: 1px solid rgba(26, 58, 138, 0.2);
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.letter-title {
+  font-family: var(--font-script);
+  font-size: 4rem;
+  margin: 0;
+  color: var(--bg-main);
+  font-weight: normal;
+}
+
+.letter-divider {
+  width: 50px;
+  height: 1px;
+  background-color: var(--bg-main);
+  margin: 1.5rem auto 2rem auto;
+  opacity: 0.3;
+}
+
+.letter-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.letter-signature {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.signature-names {
+  font-family: var(--font-script);
+  font-size: 2.5rem;
+  color: var(--bg-main);
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+}
+
+/* Carrusel Infinito */
+.carousel-wrapper {
+  width: 100vw; /* Take full viewport width */
+  margin-left: calc(-50vw + 50%); /* Hack to break out of container */
+  margin-right: calc(-50vw + 50%);
+  overflow: hidden;
+  padding: 1rem 0;
+  background: rgba(26, 58, 138, 0.2); /* Slight dark band behind carousel */
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(250px * 18 + 2rem * 18); /* approximate width of all items */
+  animation: scrollCarousel 40s linear infinite;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.carousel-slide {
+  width: 250px;
+  height: 350px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  border: 3px solid rgba(255,255,255,0.8);
+  transition: transform 0.3s ease;
+}
+
+.carousel-slide:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* Prevent drag breaking animation */
+}
+
+@keyframes scrollCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 0.75rem)); } /* Shift by half since it's duplicated */
+}

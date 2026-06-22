@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&display=swap');
+
+:root {
+  /* Cielito Lindo Talavera Elegance Theme */
+  --bg-main: #1a3a8a; /* Deep Talavera Blue */
+  --bg-darker: #122866; /* Slightly darker navy for accents */
+  --bg-lighter: #2a50a8; 
+  --text-main: #ffffff; /* Pure white text */
+  --text-muted: #e2e8f0; /* Soft white for secondary text */
+  
+  /* Accents */
+  --accent-light: #ffffff; 
+  --accent-border: rgba(255, 255, 255, 0.4); 
+
+  /* Fonts */
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-sans: 'Cormorant Garamond', serif; 
+  
+  /* Glassmorphism */
+  --bg-glass: rgba(26, 58, 138, 0.4);
+  --shadow-light: rgba(0, 0, 0, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-main);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--text-main);
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-sans);
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glassmorphism utils */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 40px var(--shadow-light);
+  border-radius: 24px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* GSAP handles fade in effects */

@@ -1,0 +1,66 @@
+.elegant-family-container {
+  background-color: transparent;
+  padding: 2rem 2rem 5rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.family-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .family-inner-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    gap: 8rem;
+  }
+}
+
+.family-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.family-role {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.family-names {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin: 0;
+  font-style: italic;
+}
+
+.tiny-floral-separator {
+  margin-top: 5rem;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tiny-floral-separator svg {
+  width: 100%;
+  height: 100%;
+  animation: pulseRotate 10s infinite linear;
+}
+
+@keyframes pulseRotate {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
